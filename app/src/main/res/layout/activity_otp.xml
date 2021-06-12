@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter your verification code"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginTop="32dp"
+        />
+
+    <com.kevalpatel.passcodeview.PinView
+        android:id="@+id/pin_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        app:dividerColor="@color/colorPrimaryDark"
+        app:fingerprintDefaultText="Scan your finger to unlock application"
+        app:fingerprintEnable="true"
+        app:fingerprintTextColor="@color/colorAccent"
+        app:fingerprintTextSize="12dp"
+        app:titleTextColor="@android:color/white"/>
+
+</LinearLayout>
+
