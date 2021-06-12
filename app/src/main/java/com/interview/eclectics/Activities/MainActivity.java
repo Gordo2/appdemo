@@ -201,7 +201,6 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < response.length(); i++) {
                 JSONObject objJson = response.getJSONObject(i);
 
-//                id, name, nodeId, fullName, dateCreated, forks, watchers
 
 
                 ArticleModel mod = new ArticleModel();
@@ -230,9 +229,9 @@ public class MainActivity extends AppCompatActivity {
     //my method to run backgound service
     public void runService() {
 
-        //Set iteration intervals
+        //Set iteration intervals in seconds
         RunService repeat = new RunService(this);
-        repeat.call(10, true);
+        repeat.call(120, true);
     }
 
 }
