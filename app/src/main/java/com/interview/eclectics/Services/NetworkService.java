@@ -120,7 +120,7 @@ public class NetworkService {
             intent = new Intent(context, MainActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
-            builder.setContentTitle("Big Spoon Taxi")                            // required
+            builder.setContentTitle("Eclectics Demo")                            // required
                     .setSmallIcon(R.drawable.logo)   // required
                     .setContentText(message) // required
                     .setDefaults(Notification.DEFAULT_ALL)
@@ -133,7 +133,7 @@ public class NetworkService {
             intent = new Intent(context, MainActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
-            builder.setContentTitle("Big Spoon Taxi")                            // required
+            builder.setContentTitle("Eclectics Demo")                            // required
                     .setSmallIcon(R.drawable.logo)     // required
                     .setContentText(message) // required
                     .setDefaults(Notification.DEFAULT_ALL)
