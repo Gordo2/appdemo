@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         btn = (Button) findViewById(R.id.btn);
 
 
@@ -113,25 +115,30 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        unregisterReceiver(alarm_receiver); // to stop the broadcast when the app is killed
-    }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        try {
+            unregisterReceiver(alarm_receiver); // to stop the broadcast when the app is killed
+        }catch (Exception e){
+
+            //Catch exception Just in case broadcaster was not registered
+            e.printStackTrace();
+        }
+    }
 
     @Override
     protected void onStart() {
         super.onStart();
 
+        //Fetch repositories and populate list
         getGithubRepos();
 
+        //Register broadcast receiver
         IntentFilter intentFilter = new IntentFilter("alaram_received");
         registerReceiver(alarm_receiver, intentFilter);
-
-
-//        responseReceiver
-
 
         runService();
     }

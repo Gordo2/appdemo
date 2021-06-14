@@ -3,6 +3,7 @@ package com.interview.eclectics.Utils;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Build;
@@ -14,6 +15,7 @@ import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.interview.eclectics.Activities.MainActivity;
 import com.interview.eclectics.R;
 
 
@@ -73,6 +75,8 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
 //            textView.setTextColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
 
             Toast.makeText(context, "Auth success", Toast.LENGTH_SHORT).show();
+
+            context.startActivity(new Intent(context, MainActivity.class));
         }
     }
 }
