@@ -121,7 +121,8 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
 
         try {
-            unregisterReceiver(alarm_receiver); // to stop the broadcast when the app is killed
+//            System.out.println("Onstop called");
+//            unregisterReceiver(alarm_receiver); // to stop the broadcast when the app is killed
         }catch (Exception e){
 
             //Catch exception Just in case broadcaster was not registered
